@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * _printf - printf like function
- * @format: identifier to look for
+ * _printf - custom implemtation of printf function
+ * @format: format string containing format specifiers
  *
- * Return: integer
+ * Return: number of characters printedi
  */
 int _printf(const char *format, ...)
 {
@@ -20,7 +20,7 @@ int _printf(const char *format, ...)
 	int j;
 
 	va_start(args, format);
-	if (format == NULL || (format[0] == '%' && format[i] == '\0'))
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 
 Here:

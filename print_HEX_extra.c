@@ -23,7 +23,7 @@ int print_HEX_extra(unsigned int num)
 		array[i] = tem % 16;
 		tem = tem / 16;
 	}
-	for (i = counter - 1; i >= 0; i++)
+	for (i = counter - 1; i >= 0; i--)
 	{
 		if (array[i] > 9)
 			array[i] = array[i] + 7;
