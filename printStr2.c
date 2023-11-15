@@ -5,7 +5,7 @@
  *
  * Return: length of characters
  */
-int print_string_exc(va_list, val)
+int print_string_exc(va_list val)
 {
 	char *s;
 	int i, len = 0;
@@ -13,7 +13,7 @@ int print_string_exc(va_list, val)
 
 	s = va_arg(val, char *);
 	if (s == NULL)
-		s == "(null)";
+		s = "(null)";
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		if (s[i] < 32 || s[i] >= 127)

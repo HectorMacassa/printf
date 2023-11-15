@@ -1,15 +1,15 @@
 #include "main.h"
 /**
- * print_HEX_extra - converts to hexadecimal
+ * print_hex_extra - converts to hexadecimal
  * @num: number
  *
  * Return: counter
  */
-int print_HEX_extra(unsigned int num)
+int print_hex_extra(unsigned long int num)
 {
-	int i, counter = 0;
-	int *array;
-	unsigned int tem = num;
+	long int i, counter = 0;
+	long int *array;
+	unsigned long int tem = num;
 
 	while (num / 16 != 0)
 	{
@@ -17,7 +17,7 @@ int print_HEX_extra(unsigned int num)
 		counter++;
 	}
 	counter++;
-	array = malloc(sizeof(int) * counter);
+	array = malloc(sizeof(long int) * counter);
 	for (i = 0; i < counter; i++)
 	{
 		array[i] = tem % 16;
@@ -26,11 +26,10 @@ int print_HEX_extra(unsigned int num)
 	for (i = counter - 1; i >= 0; i++)
 	{
 		if (array[i] > 9)
-			array[i] = array[i] + 7;
+			array[i] = array[i] + 39;
 		_putchar(array[i] + '0');
 	}
 	free(array);
 	return (counter);
 }
-
 
