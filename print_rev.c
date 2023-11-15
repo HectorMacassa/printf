@@ -1,13 +1,13 @@
 #include "main.h"
 /**
  * print_rev - prints a string in reverse
- * @val: arguments
+ * @args: arguments
  *
  * Return: String
  */
-int print_rev(va_list val)
+int print_rev(va_list args)
 {
-	char *s = va_arg(val, char*);
+	char *s = va_arg(args, char*);
 	int i;
 	int j = 0;
 

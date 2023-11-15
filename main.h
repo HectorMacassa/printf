@@ -3,6 +3,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
+#include <limits.h>
+#include <unistd.h>
+
+/**
+ * struct format - converter for printf
+ * @id: type char pointer of specifier
+ * @f: function for the conversion specifier
+ *
+ */
 
 typedef struct format
 {
